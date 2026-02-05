@@ -28,9 +28,13 @@ Esta es una aplicación móvil híbrida desarrollada con **Ionic Angular** para 
 ## 📖 Guía de Uso
     
 **Visualización**: Al abrir la app, verás la lista de tareas pendientes.
+
 **Creación**: Haz clic en el botón de agregar (+) para crear una nueva tarea. Completa el título, descripción y selecciona una fecha.
+
 **Detalles**: Toca cualquier tarea de la lista para ver su información completa.
+
 **Persistencia**: Las tareas se guardan localmente para que no las pierdas al cerrar la aplicación.
+
 **Modo Oscuro**: Puedes cambiar entre modo claro y oscuro usando el botón (toggle) ubicado en la parte superior derecha de la aplicación.
 
 ## 🧪 Pruebas Unitarias
