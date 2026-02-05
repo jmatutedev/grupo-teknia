@@ -11,7 +11,7 @@ Esta es una aplicación móvil híbrida desarrollada con **Ionic Angular** para 
 ### Pasos
 1.  **Clonar el repositorio**:
     ```bash
-    git clone [<url-del-repo>](https://github.com/RoxZkiL/grupo-teknia.git)
+    git clone https://github.com/RoxZkiL/grupo-teknia.git
     ```
 
 2.  **Instalar dependencias**:
