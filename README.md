@@ -24,6 +24,14 @@ Esta es una aplicación móvil híbrida desarrollada con **Ionic Angular** para 
     ionic serve
     ```
     La aplicación se abrirá automáticamente en `http://localhost:8100`.
+27. 
+28. ## 📖 Guía de Uso
+29. 
+30. 1.  **Visualización**: Al abrir la app, verás la lista de tareas pendientes.
+31. 2.  **Creación**: Haz clic en el botón de agregar (+) para crear una nueva tarea. Completa el título, descripción y selecciona una fecha.
+32. 3.  **Detalles**: Toca cualquier tarea de la lista para ver su información completa.
+33. 4.  **Persistencia**: Las tareas se guardan localmente para que no las pierdas al cerrar la aplicación.
+34. 5.  **Modo Oscuro**: Puedes cambiar entre modo claro y oscuro usando el botón (toggle) ubicado en la parte superior derecha de la aplicación.
 
 ## 🧪 Pruebas Unitarias
 
