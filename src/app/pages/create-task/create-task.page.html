@@ -4,20 +4,20 @@
   <div class="content-wrapper animate__animated animate__fadeIn animate__fast">
     <form [formGroup]="taskForm" (ngSubmit)="createTask()">
 
-      <ion-item lines="none" class="input-item">
+      <ion-item lines="none" class="input-item" mode="ios">
         <ion-input formControlName="title" label="Título *" label-placement="stacked"
           placeholder="Ej: Comprar pasajes de bus" fill="solid" [errorText]="getControl('title')?.touched && getControl('title')?.hasError('required') ? 'El título es obligatorio' : 
                        getControl('title')?.hasError('minlength') ? 'Mínimo 3 caracteres' : ''">
         </ion-input>
       </ion-item>
 
-      <ion-item lines="none" class="input-item">
+      <ion-item lines="none" class="input-item" mode="ios">
         <ion-textarea formControlName="description" label="Descripción" label-placement="stacked"
           placeholder="Agrega detalles..." fill="solid" [autoGrow]="true" rows="4">
         </ion-textarea>
       </ion-item>
 
-      <ion-item lines="none" class="input-item datetime-item">
+      <ion-item lines="none" class="input-item datetime-item" mode="ios">
         <ion-label>Fecha de entrega</ion-label>
         <ion-datetime-button datetime="datetime"></ion-datetime-button>
 
