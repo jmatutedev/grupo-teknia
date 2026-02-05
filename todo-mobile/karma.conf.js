@@ -39,6 +39,10 @@ module.exports = function (config) {
     autoWatch: true,
     browsers: ['Chrome'],
     singleRun: false,
-    restartOnFileChange: true
+    restartOnFileChange: true,
+    browserNoActivityTimeout: 100000,
+    browserDisconnectTimeout: 20000,
+    browserDisconnectTolerance: 3,
+    hostname: '127.0.0.1'
   });
 };

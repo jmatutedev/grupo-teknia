@@ -1,0 +1,11 @@
+<ion-header class="ion-no-border" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      @if (showBack) {
+      <ion-back-button defaultHref="/home" text="" (click)="goBack()" class="back-button"></ion-back-button>
+      }
+    </ion-buttons>
+    <ion-title>{{ title }}</ion-title>
+    <ion-toggle slot="end" class="toggle-switch" (ionChange)="toggleDarkMode()" [(ngModel)]="isDarkMode"></ion-toggle>
+  </ion-toolbar>
+</ion-header>

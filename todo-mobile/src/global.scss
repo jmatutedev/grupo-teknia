@@ -1,14 +1,3 @@
-/*
- * App Global CSS
- * ----------------------------------------------------------------------------
- * Put style rules here that you want to apply globally. These styles are for
- * the entire app and not just one component. Additionally, this file can be
- * used as an entry point to import other CSS/Sass files to be included in the
- * output CSS.
- * For more information on global stylesheets, visit the documentation:
- * https://ionicframework.com/docs/layout/global-stylesheets
- */
-
 /* Core CSS required for Ionic components to work properly */
 @import "@ionic/angular/css/core.css";
 
@@ -25,13 +14,213 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
-/**
- * Ionic Dark Mode
- * -----------------------------------------------------
- * For more info, please see:
- * https://ionicframework.com/docs/theming/dark-mode
- */
 
-/* @import "@ionic/angular/css/palettes/dark.always.css"; */
-/* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+
+/*ESTILOS Y CLASES COMPARTIDAS */
+
+
+.bipay-card {
+  border-radius: 16px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+  border: 1px solid #edf0f5;
+  background: var(--ion-card-background);
+  margin: 10px 0;
+}
+
+.status-badge {
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+}
+
+ion-content {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+}
+
+ion-button {
+  --border-radius: 12px;
+  font-weight: 600;
+  text-transform: none;
+  --box-shadow: none;
+}
+
+ion-item {
+  --border-radius: 12px;
+  --padding-start: 16px;
+  --inner-padding-end: 16px;
+  margin-bottom: 8px;
+  --background-hover: rgba(var(--ion-color-primary-rgb), 0.05);
+}
+
+ion-toolbar {
+  --background: #ffffff;
+  --border-style: none;
+  color: var(--ion-color-secondary);
+  font-weight: 700;
+}
+
+
+/**
+ * MODO OSCURO - CLASES PERSONALIZADAS
+ */
+body.dark {
+
+
+  .bipay-card {
+    background: var(--ion-card-background);
+    border: 1px solid #334155 !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .status-badge {
+    &.completed {
+      background-color: #064e3b;
+      color: #6ee7b7;
+    }
+
+    &.pending {
+      background-color: #78350f;
+      color: #fcd34d;
+    }
+  }
+
+  ion-toolbar {
+    --background: #1e293b;
+    --color: #f1f5f9;
+    --border-color: #334155;
+  }
+
+  ion-item {
+    --background: #1e293b;
+    --color: #f1f5f9;
+    --border-color: #334155;
+  }
+
+  .empty-state {
+    .empty-icon {
+      color: #475569;
+    }
+
+    .empty-text {
+      color: #94a3b8;
+    }
+  }
+
+  .task-card {
+    background: var(--ion-card-background);
+
+    ion-card-content {
+      background: var(--ion-card-background);
+    }
+
+    &:hover {
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+    }
+  }
+
+  .task-title {
+    color: #f1f5f9;
+  }
+
+  .task-meta {
+    color: #94a3b8;
+
+    .task-id {
+      color: #94a3b8;
+    }
+
+    .task-date {
+      color: #64748b;
+    }
+  }
+
+  .content-wrapper {
+    background: var(--ion-background-color);
+  }
+
+  ion-searchbar {
+    --background: #1e293b;
+    --color: #f1f5f9;
+    --placeholder-color: #64748b;
+    --icon-color: #94a3b8;
+
+    input {
+      color: #f1f5f9 !important;
+    }
+  }
+
+  /* FIX DATETIMEPICKER MODO OSCURO */
+  /* FIX ESPECÍFICO PARA EL BOTÓN DISPARADOR */
+  ion-datetime-button {
+    --background: #334155 !important;
+    /* Gris azulado oscuro */
+    --color: #ffffff !important;
+    /* Texto blanco */
+    border-radius: 8px;
+    margin: 0;
+
+    &::part(native) {
+      /* Esto fuerza el color en la parte interna del Shadow DOM */
+      color: #ffffff !important;
+      background: #334155 !important;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  ion-modal {
+    --background: #1e293b;
+    --border-radius: 16px;
+    --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+
+    ion-datetime {
+      --background: #1e293b;
+      --background-focused: #2d3748;
+      color: #f1f5f9;
+      --color-selected: #ffffff;
+      --background-selected: var(--ion-color-primary);
+
+      &::part(day active) {
+        border-radius: 10px;
+      }
+    }
+  }
+
+  ion-alert {
+    --background: #1e293b;
+    --color: #f1f5f9;
+
+    .alert-wrapper {
+      background: #1e293b !important;
+    }
+
+    .alert-head h2 {
+      color: #f1f5f9 !important;
+    }
+
+    .alert-message {
+      color: #cbd5e1 !important;
+    }
+
+    .alert-button {
+      color: var(--ion-color-primary) !important;
+
+      &.alert-button-role-destructive {
+        color: var(--ion-color-danger) !important;
+      }
+    }
+  }
+
+  ion-fab-button {
+    --box-shadow: 0 4px 16px rgba(139, 103, 255, 0.4);
+  }
+
+  .search-container {
+    background: #f0f0f084;
+  }
+
+}

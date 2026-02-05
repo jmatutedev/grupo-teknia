@@ -1,0 +1,21 @@
+<app-header [title]="'Detalle de Tarea'" [showBack]="true"></app-header>
+
+<ion-content [fullscreen]="true" *ngIf="task">
+  <div class="content-wrapper animate__animated animate__fadeIn animate__fast">
+    <!-- Card principal con info de la tarea -->
+    <app-task-card [task]="task" [showDetail]="true"></app-task-card>
+
+    <!-- Botón para cambiar estado -->
+    <ion-button expand="block" [color]="task.completed ? 'primary' : 'success'" (click)="toggleStatus()">
+      <ion-icon [name]="task.completed ? 'close-circle-outline' : 'checkmark-circle-outline'" slot="start">
+      </ion-icon>
+      {{ task.completed ? 'Marcar como Pendiente' : 'Marcar como Completada' }}
+    </ion-button>
+
+    <!-- Botón para eliminar -->
+    <ion-button expand="block" color="danger" fill="outline" (click)="deleteTodo()">
+      <ion-icon name="trash-outline" slot="start"></ion-icon>
+      Eliminar tarea
+    </ion-button>
+  </div>
+</ion-content>

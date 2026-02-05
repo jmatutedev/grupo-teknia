@@ -1,0 +1,30 @@
+<ion-card class="bipay-card task-card" [class.is-detail]="showDetail" (click)="taskClicked()">
+  <ion-card-content>
+
+    <div class="task-header">
+      <h3 class="task-title">{{ task.title }}</h3>
+      <span class="status-badge" [ngClass]="task.completed ? 'completed' : 'pending'">
+        {{ task.completed ? (showDetail ? 'Completada' : 'Completa') : 'Pendiente' }}
+      </span>
+    </div>
+
+    <div class="task-meta">
+      <div class="meta-item">
+        <ion-icon *ngIf="showDetail" name="hash-outline"></ion-icon>
+        <span class="task-id">ID: #{{ task.id }}</span>
+      </div>
+      <div class="meta-item" *ngIf="task.date">
+        <ion-icon *ngIf="showDetail" name="calendar-outline"></ion-icon>
+        <span class="task-date">{{ task.date | date: 'dd-MM-yyyy' }}</span>
+      </div>
+    </div>
+
+    <div class="task-description" *ngIf="showDetail">
+      <h4>Descripción</h4>
+      <p [class.no-description]="!task.description">
+        {{ task.description || 'Sin descripción' }}
+      </p>
+    </div>
+
+  </ion-card-content>
+</ion-card>

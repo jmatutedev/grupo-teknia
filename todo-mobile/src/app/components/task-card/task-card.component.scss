@@ -1,0 +1,107 @@
+.task-card {
+  transition: transform 0.2s;
+
+  &:not(.is-detail) {
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  &.is-detail {
+    margin: 0 0 24px 0;
+    cursor: default;
+
+    .task-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .task-meta {
+      gap: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #e2e8f0;
+      justify-content: space-between;
+      margin-top: 16px;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      ion-icon {
+        color: var(--ion-color-primary);
+        font-size: 1.1rem;
+      }
+    }
+
+    .task-date::before {
+      display: none;
+    }
+  }
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.task-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ion-color-secondary);
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.65rem;
+  font-weight: 800;
+
+  &.completed {
+    background: #61ff91de;
+    color: #00875a;
+  }
+
+  &.pending {
+    background: #ffb752;
+    color: #9a6200;
+  }
+}
+
+.task-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.task-description {
+  margin-top: 20px;
+
+  h4 {
+    margin: 0 0 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--ion-color-secondary);
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.6;
+    color: #475569;
+
+  }
+
+  .no-description {
+    color: #94a3b8;
+    font-style: italic;
+    font-size: 0.8rem;
+  }
+}

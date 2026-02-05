@@ -1,2 +1,77 @@
-// For information on how to create your own theme, please refer to:
-// https://ionicframework.com/docs/theming/
+/* 1. IMPORTACIÓN DE FUENTE (Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/**
+ * Ionic Variables & Shared Styles
+ * Basado en la identidad visual de Bipay Wallet
+ */
+
+:root {
+  /** 2. COLORES PRINCIPALES (Extraídos de Bipay) **/
+  --ion-color-primary: #6f42f5;
+  --ion-color-primary-rgb: 111, 66, 245;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-shade: #623ad8;
+  --ion-color-primary-tint: #7d55f6;
+
+  --ion-color-secondary: #3d3995;
+  --ion-color-secondary-rgb: 61, 57, 149;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-shade: #363283;
+  --ion-color-secondary-tint: #504da0;
+
+  --ion-color-success: #2dd4bf;
+  /* Para tareas completadas */
+  --ion-color-danger: #eb445a;
+  /* Para el botón de "Eliminar cuenta" */
+
+  /** 3. COLORES DE INTERFAZ Y FONDO **/
+  --ion-background-color: #f0f0f0;
+  /* Fondo grisáceo muy claro de las capturas */
+  --ion-background-color-rgb: 244, 245, 249;
+
+  --ion-item-background: #ffffff;
+  --ion-card-background: #ffffff;
+
+  --ion-text-color: #1e293b;
+  --ion-text-color-rgb: 30, 41, 59;
+
+  /** 4. TIPOGRAFÍA GLOBAL **/
+  --ion-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Roboto', sans-serif;
+}
+
+/**
+ * ========================================
+ * MODO OSCURO - VARIABLES CSS
+ * ========================================
+ * Se aplican cuando body tiene la clase 'dark'
+ */
+body.dark {
+  /** COLORES PRIMARIOS (adaptados para mejor contraste en oscuro) **/
+  --ion-color-primary: #8b67ff;
+  --ion-color-primary-rgb: 139, 103, 255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-shade: #7a5be0;
+  --ion-color-primary-tint: #9577ff;
+
+  --ion-color-secondary: #5d57c1;
+  --ion-color-secondary-rgb: 93, 87, 193;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-shade: #524daa;
+  --ion-color-secondary-tint: #6d68c7;
+
+  /** COLORES DE ESTADO (mejorados para dark mode) **/
+  --ion-color-success: #34d399;
+  --ion-color-danger: #f87171;
+
+  /** FONDOS OSCUROS **/
+  --ion-background-color: #0f172a;
+  --ion-background-color-rgb: 15, 23, 42;
+
+  --ion-item-background: #1e293b;
+  --ion-card-background: #1e293b;
+
+  /** TEXTOS EN MODO OSCURO **/
+  --ion-text-color: #f1f5f9;
+  --ion-text-color-rgb: 241, 245, 249;
+}

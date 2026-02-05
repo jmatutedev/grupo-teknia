@@ -1,0 +1,43 @@
+<app-header [title]="'TaskManager'">
+</app-header>
+
+<ion-content [fullscreen]="true">
+  <div class=" content-wrapper animate__animated animate__fadeIn animate__fast">
+    <!-- Searchbar -->
+    <div class="search-container">
+      <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="onSearchChange($event)" placeholder="Buscar tareas..."
+        [debounce]="300" mode="ios">
+      </ion-searchbar>
+    </div>
+
+    <!-- Estado vacío -->
+    <div *ngIf="filteredTodos.length === 0" class="empty-state">
+      <ion-icon name="search-outline" class="empty-icon"></ion-icon>
+      <p class="empty-text">
+        {{ searchTerm ? 'No tienes tareas aún' : 'No se encontraron tareas' }}
+      </p>
+    </div>
+
+    <!-- Lista de tareas -->
+    <div class="tasks-list" *ngIf="filteredTodos.length > 0">
+      @for(todo of filteredTodos; track todo.id) {
+      <app-task-card [task]="todo" (clickedTask)="goToDetail($event)">
+      </app-task-card>
+      }
+    </div>
+
+    <!-- Cargar mas tareas al hacer scroll -->
+    <ion-infinite-scroll [disabled]="searchTerm.trim().length > 0" threshold="150px" (ionInfinite)="onLoadMore($event)"
+      style="margin-top: 20px;">
+      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando más tareas...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+
+  <!-- FAB para crear nueva tarea -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="goToCreate()" color="primary">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
