@@ -1,6 +1,6 @@
 # Todo Mobile App
 
-Esta es una aplicación móvil híbrida desarrollada con **Ionic Angular** para gestionar tareas. Cumple con los requisitos del desafío técnico, incluyendo gestión de estado, persistencia local y consumo de API.
+Esta es una aplicación móvil híbrida desarrollada con **Ionic Angular** para gestionar tareas. Incluye gestión de estado, persistencia local y consumo de API.
 
 ## 🚀 Cómo correr el proyecto
 
