@@ -66,6 +66,3 @@ npx ng test --include src/app/pages/create-task/create-task.page.spec.ts --watch
 -   **Sub-tareas (Checklists)**: Capacidad de desglosar tareas complejas en pasos más pequeños dentro del detalle.
 -   **Acciones en Lote**: Selección múltiple para borrar o marcar como completadas varias tareas de un solo click.
 -   **Sincronización en la Nube**: Integración con un backend real (Firebase/Node.js) para acceder a las tareas desde cualquier dispositivo.
-
----
-Desarrollado para el desafío técnico de **Grupo Teknia**.
